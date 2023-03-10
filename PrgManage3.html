@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="www.yanshisan.cn" />
+    <meta name="robots" content="all" />
+    <title>文章</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="css/gloable.css" />
+    <link rel="stylesheet" href="css/nprogress.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+	<div class="header">
+    </div>
+    <header class="gird-header">
+        <div class="header-fixed">
+            <div class="header-inner">
+                <a href="javascript:void(0)" class="header-logo" id="logo">Preing</a>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="PrgManage.html">项目管理</a></li>
+                        <li><a href="PaperManage.html">论文管理</a></li>
+                        <li><a href="account.html">个人中心</a></li>
+						<li><a href="message.html">消息中心</a></li>
+                    </ul>
+                </nav>
+                <a class="phone-menu">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="doc-container" id="doc-container">
+        <div class="container-fixed">
+		    <div class="col-content">
+		        <div class="inner">
+		            <article class="article-list bloglist" id="LAY_bloglist" >
+						<!-- <section class="article-item zoomIn article">       
+							<h5 class="title">       
+								<span class="fc-blue">【国创】</span>       
+								<a href="programme1.html">《Preing》资源共享平台</a>   
+							</h5>   
+							<div class="content">       
+								<p>起止日期：2020.3-2021.6</p>
+								<p>金额：300000元</p>
+								<p>合作单位：华东师范大学软件工程学院</p>
+								<p>Preing资源共享平台是由xx/xx/xx开发的资源共享平台，与华东师范大学软件工程学院达成合作，应用于软件工程学院web主页</p>
+							</div>   
+						</section>
+						<section class="article-item zoomIn article">       
+							<h5 class="title">       
+								<span class="fc-blue">【校创】</span>       
+								<a href="programme1.html">《Preing》资源共享平台</a>   
+							</h5>   
+							<div class="time">       
+								<span class="day">21</span>       
+								<span class="month fs-18">1<span class="fs-14">月</span></span>       
+								<span class="year fs-18 ml10">2019</span>   
+							</div>   
+							<div class="content">       
+								<a href="/Blog/Read/16" class="cover img-light">           
+									<img src="image/cover/2019121192339714.png">       
+								</a>
+								Preing资源共享平台是由xx/xx/xx开发的资源共享平台。
+							</div>   
+						</section>
+						<section class="article-item zoomIn article">       
+							<h5 class="title">       
+								<span class="fc-blue">【横向】</span>       
+								<a href="programme2.html">《Preing》资源共享平台</a>   
+							</h5>   
+							<div class="content">       
+								<p>起止年份：2020.3-2021.6</p>
+								<p>金额：300000元</p>
+								<p>合作单位：华东师范大学软件工程学院</p>
+								<p>Preing资源共享平台是由xx/xx/xx开发的资源共享平台，与华东师范大学软件工程学院达成合作，应用于软件工程学院web主页</p>
+							</div>   
+						</section>
+						<section class="article-item zoomIn article">       
+							<h5 class="title">       
+								<span class="fc-blue">【纵向】</span>       
+								<a href="programme3.html">《Preing》资源共享平台</a>   
+							</h5>   
+							<div class="content">       
+								<p>起止年份：2020.3-2021.6</p>
+								<p>金额：300000元</p>
+								<p>自然基金：xxxxxxx</p>
+								<p>Preing资源共享平台是由xx/xx/xx开发的资源共享平台，与华东师范大学软件工程学院达成合作，应用于软件工程学院web主页</p>
+							</div>   
+						</section> -->
+		            </article>
+		        </div> 
+		    </div>
+		    <div class="col-other">
+		        <div class="inner">
+					<div class="other-item" id="categoryandsearch">
+			    		<div class="search">
+					        <label class="search-wrap">
+					            <input type="text" id="searchtxt" placeholder="输入关键字搜索" />
+					            <span class="search-icon">
+					                <i class="fa fa-search" onclick="search()"></i>
+					            </span>
+					        </label>
+			        		<ul class="search-result"></ul>
+			    		</div>
+			    		<ul class="category mt20" id="category">
+				        	<li data-index="0" class="slider"></li>
+				        	<li data-index="1"><a href="PrgManage.html">全部文章</a></li>
+				            <li data-index="2"><a href="PrgManage1.html">国创</a></li>
+				            <li data-index="3"><a href="PrgManage2.html">校创</a></li>
+				            <li data-index="4"><a href="PrgManage3.html">横向</a></li>
+				            <li data-index="5"><a href="PrgManage4.html">纵向</a></li>
+			    		</ul>
+						<div class="search">
+							<p style="color:white;font-family:'SimHei';font-size:1.1em" onclick="addPrg()">+新建项目</p>
+			    		</div>
+					</div>
+					<!--右边悬浮 平板或手机设备显示-->
+					<div class="category-toggle"><i class="layui-icon">&#xe603;</i></div>
+					<div class="article-category">
+					    <div class="article-category-title">分类导航</div>
+					            <a href="PrgManage1.html">国创</a>
+					            <a href="PrgManage2.html">校创</a>
+					            <a href="PrgManage3.html">横向</a>
+					            <a href="PrgManage4.html">纵向</a>
+					    <div class="f-cb"></div>
+						<div class="search">
+							<p style="color:white;font-family:'SimHei';font-size:1.1em" onclick="addPrg()">+新建项目</p>
+			    		</div>
+					</div>
+					<!--遮罩-->
+		        </div>
+		    </div>
+		</div>
+    </div>
+    <footer class="grid-footer">
+        <div class="footer-fixed">
+            <div class="copyright">
+                <div class="info">
+                    <div class="contact">
+                        <a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                        <a href="https://wpa.qq.com/msgrd?v=3&uin=930054439&site=qq&menu=yes" class="qq" target="_blank" title="930054439"><i class="fa fa-qq"></i></a>
+                        <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gbiysbG0tbWyuMHw8K-i7uw" class="email" target="_blank" title="930054439@qq.com"><i class="fa fa-envelope"></i></a>
+                        <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="layui/layui.js"></script>
+    <script src="js/yss/gloable.js"></script>
+    <script src="js/plugins/nprogress.js"></script>
+    <script>NProgress.start();</script>
+ 	<script src="js/yss/article.js"></script>
+	<script src="js/PrgManage3.js"></script>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</body>
+</html>

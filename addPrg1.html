@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width" />
+    <title>项目添加</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="css/gloable.css" />
+    <link rel="stylesheet" href="css/nprogress.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+    <div class="header">
+    </div>
+    <header class="gird-header">
+        <div class="header-fixed">
+            <div class="header-inner">
+                <a href="javascript:void(0)" class="header-logo" id="logo">Preing</a>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="PrgManage.html">项目管理</a></li>
+                        <li><a href="PaperManage.html">论文管理</a></li>
+                        <li><a href="account.html">个人中心</a></li>
+						<li><a href="message.html">消息中心</a></li>
+                    </ul>
+                </nav>
+                <a class="phone-menu">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="doc-container" id="doc-container">
+        <div class="container-fixed">
+            <div class="col-content" style="width:100%">
+                <div class="inner">
+                    <article class="article-list">
+                        <input type="hidden" value="@Model.BlogTypeID" id="blogtypeid" />
+                        <section class="article-item">
+                            <aside class="title" style="line-height:1.5;">
+                                <span class="fc-blue"><h4 id="name1">新增项目（国创/校创）</h4></span>   
+                            </aside>
+                            <div class="content artiledetail" style="border-bottom: 1px solid #e1e2e0; padding-bottom: 20px;">
+                                <div style="margin-top:10px;font-size:1.1rem;">项目名称：<input type="text" class="form-control" style="width:50%;" id="prgName" placeholder="请输入项目名称"></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目类型：
+                                    <select id="prgType">
+                                        <option value="1">国创</option>
+                                        <option value="2">校创</option>
+                                    </select>
+                                </div>
+                                <div style="margin-top:10px;font-size:1.1rem;">学科专业：<input type="text" class="form-control" style="width:50%;" id="major" placeholder="请输入学科专业"></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目负责人：<input type="text" class="form-control" style="width:50%;" id="captainName" placeholder="项目负责人"></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目编号：<input type="text" class="form-control" style="width:50%;" id="number" placeholder="请输入项目编号"></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目评分：<input type="text" class="form-control" style="width:50%;" id="score" value="本项由管理员输入" disabled="disabled"></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目开始日期：<input type="date" id="startTime" style="width:50%;" class="information"><br></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目截止日期：<input type="date" id="deadline" style="width:50%;" class="information"><br></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">项目介绍：<div><textarea type="text" class="form-control" style="width:50%;" id="introduction" placeholder="请填写项目介绍" style="border:1px black solid;width:50%;padding:5px;"></textarea></div></div>
+                                <div style="margin-top:10px;font-size:1.1rem;">附件上传：<input type="file" class="form-control" id="file" name="search" placeholder="输入项目成果"></div>
+                            </div>
+                            <button class="layui-btn" style="margin-top:10px;" onclick="uploadInfo()">新增项目</button>
+                            <button class="layui-btn" style="margin-top:10px;" onclick="updateType()">调整项目类型</button>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="grid-footer">
+        <div class="footer-fixed">
+            <div class="copyright">
+                <div class="info">
+                    <div class="contact">
+                        <a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                        <a href="#" class="qq" target="_blank" ><i class="fa fa-qq"></i></a>
+                        <a href="#" class="email" target="_blank" ><i class="fa fa-envelope"></i></a>
+                        <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="layui/layui.js"></script>
+    <script src="js/yss/gloable.js"></script>
+    <script src="js/plugins/nprogress.js"></script>
+    <script src="js/pagecomment.js"></script>
+    <script>NProgress.start();</script>
+    <script src="js/addPrg1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</body>
+</html>

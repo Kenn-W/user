@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "../../桌面/1.2"
+		}
+	],
+    "settings": {
+        "files.associations": {
+            "stdlib.h": "c",
+            "signal.h": "c"
+        }
+    }
+}
